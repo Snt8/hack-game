@@ -11,12 +11,15 @@ config_version=5
 [application]
 
 config/name="hack-game"
-run/main_scene="uid://qh88h7gboap4"
+run/main_scene="uid://tbd5w56v2cef"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=433
+window/size/viewport_height=264
+window/size/initial_position=Vector2i(194, 251)
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
