@@ -2,6 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://bjhyakgp7dciq" path="res://assets/character-sprites.png" id="1_fs2pi"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs2pi"]
+atlas = ExtResource("1_fs2pi")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ro0a"]
+atlas = ExtResource("1_fs2pi")
+region = Rect2(32, 64, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_uskv6"]
 atlas = ExtResource("1_fs2pi")
 region = Rect2(0, 0, 32, 32)
@@ -10,8 +18,32 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("1_fs2pi")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufdn0"]
+atlas = ExtResource("1_fs2pi")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilp76"]
+atlas = ExtResource("1_fs2pi")
+region = Rect2(32, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_xkuwh"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs2pi")
+}],
+"loop": 1,
+"name": &"bounce-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ro0a")
+}],
+"loop": 1,
+"name": &"bounce-right",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 2.5,
 "texture": SubResource("AtlasTexture_uskv6")
@@ -23,7 +55,13 @@ animations = [{
 "name": &"default-left",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_ufdn0")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_ilp76")
+}],
 "loop": 1,
 "name": &"default-right",
 "speed": 5.0
