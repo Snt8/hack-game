@@ -1,3 +1,109 @@
 [gd_scene format=3 uid="uid://cgq4co5u3q8f2"]
 
+[ext_resource type="Texture2D" uid="uid://ulqjukl2ghjb" path="res://assets/Hoja de sprites_ criatura amarilla caminando.png" id="1_xs55s"]
+[ext_resource type="Texture2D" uid="uid://cafrlgn8rean1" path="res://assets/Sprite de personaje pixelado caminando a la izquierda.png" id="2_5a8jg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8mh7"]
+atlas = ExtResource("1_xs55s")
+region = Rect2(0, 0, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_safss"]
+atlas = ExtResource("1_xs55s")
+region = Rect2(1034, 0, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koyxh"]
+atlas = ExtResource("1_xs55s")
+region = Rect2(517, 0, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hivi7"]
+atlas = ExtResource("1_xs55s")
+region = Rect2(0, 512, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kylf"]
+atlas = ExtResource("1_xs55s")
+region = Rect2(517, 512, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpxij"]
+atlas = ExtResource("1_xs55s")
+region = Rect2(1034, 512, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfn64"]
+atlas = ExtResource("2_5a8jg")
+region = Rect2(0, 0, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh17j"]
+atlas = ExtResource("2_5a8jg")
+region = Rect2(517, 0, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2821w"]
+atlas = ExtResource("2_5a8jg")
+region = Rect2(1034, 0, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83ano"]
+atlas = ExtResource("2_5a8jg")
+region = Rect2(0, 512, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2qh2"]
+atlas = ExtResource("2_5a8jg")
+region = Rect2(517, 512, 501, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7dbc"]
+atlas = ExtResource("2_5a8jg")
+region = Rect2(1034, 512, 501, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0xt8"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_a8mh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_safss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_koyxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hivi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kylf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpxij")
+}],
+"loop": 1,
+"name": &"Mover_Hacia_Atras",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfn64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh17j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2821w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83ano")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2qh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7dbc")
+}],
+"loop": 1,
+"name": &"Mover_Hacia_adelante",
+"speed": 5.0
+}]
+
 [node name="Pachuca" type="Node2D" unique_id=1910747034]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1160570462]
+sprite_frames = SubResource("SpriteFrames_w0xt8")
+animation = &"Mover_Hacia_adelante"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1395283416]
