@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bam1wnjyjcbjl"]
+
+[ext_resource type="Texture2D" uid="uid://bjhyakgp7dciq" path="res://assets/character-sprites.png" id="1_fs2pi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uskv6"]
+atlas = ExtResource("1_fs2pi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4y28"]
+atlas = ExtResource("1_fs2pi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkuwh"]
+animations = [{
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_uskv6")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_n4y28")
+}],
+"loop": 1,
+"name": &"default-left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default-right",
+"speed": 5.0
+}]
+
+[node name="Rabfran" type="Node2D" unique_id=1665560285]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1629483050]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=546575668]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_xkuwh")
+animation = &"default-left"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=1974749537]
+position = Vector2(-4, -5)
+scale = Vector2(0.39999998, 0.6)
+polygon = PackedVector2Array(-10.000001, 10.000001, 10.000001, 10.000001, 10.000001, -10, -10.000001, -10)
