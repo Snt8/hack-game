@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://qh88h7gboap4"]
+
+[ext_resource type="Texture2D" uid="uid://1ohbgy5cgqy1" path="res://assets/test-world-sprite.png" id="1_fdbuh"]
+[ext_resource type="PackedScene" uid="uid://bam1wnjyjcbjl" path="res://scenes/characters/rabfran.tscn" id="2_4sufl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkuwh"]
+size = Vector2(1151.5, 23)
+
+[node name="TestWorldScene" type="Node2D" unique_id=1894313864]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=858697704]
+position = Vector2(-5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1993743237]
+texture_filter = 1
+position = Vector2(588, 322)
+scale = Vector2(36.140625, 20.187498)
+texture = ExtResource("1_fdbuh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1210413075]
+position = Vector2(587.25, 492.5)
+shape = SubResource("RectangleShape2D_xkuwh")
+debug_color = Color(0.8565167, 0.36676794, 3.85046e-07, 0.41960785)
+
+[node name="Rabfran" parent="." unique_id=1665560285 instance=ExtResource("2_4sufl")]
+position = Vector2(75.000015, 477)
+scale = Vector2(7, 7)
