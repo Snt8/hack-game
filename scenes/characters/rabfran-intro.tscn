@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cpgvpknicbexv"]
 
+[ext_resource type="Script" uid="uid://diydpykxmx3mf" path="res://scripts/wordl/rabfran-intro.gd" id="1_o3rv0"]
 [ext_resource type="Texture2D" uid="uid://bjhyakgp7dciq" path="res://assets/character-sprites.png" id="2_i4bya"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ilp76"]
@@ -57,17 +58,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Rabfran" type="Node2D" unique_id=1665560285]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1629483050]
+script = ExtResource("1_o3rv0")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1629483050]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=546575668]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=546575668]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xkuwh")
 animation = &"bounce-right"
 frame_progress = 0.93068933
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=1974749537]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1974749537]
 position = Vector2(-4, -5)
 scale = Vector2(0.39999998, 0.6)
 polygon = PackedVector2Array(-10.000001, 10.000001, 10.000001, 10.000001, 10.000001, -10, -10.000001, -10)

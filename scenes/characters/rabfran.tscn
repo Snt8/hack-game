@@ -74,21 +74,12 @@ position = Vector2(-4, -5)
 scale = Vector2(0.39999998, 0.6)
 polygon = PackedVector2Array(-10.000001, 10.000001, 10.000001, 10.000001, 10.000001, -10, -10.000001, -10)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1890731637]
-zoom = Vector2(1.5, 1.5)
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_horizontal_offset = -1.0
-drag_vertical_offset = -1.0
-drag_left_margin = 0.0
-drag_top_margin = 0.0
-drag_right_margin = 0.0
-drag_bottom_margin = 0.0
-
 [node name="PlayerHealth" type="Node2D" parent="." unique_id=134064540]
 position = Vector2(1, 1)
 script = ExtResource("3_n4y28")
 
 [node name="InmunityTimer" type="Timer" parent="PlayerHealth" unique_id=1071609763]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1115393510]
 
 [connection signal="timeout" from="PlayerHealth/InmunityTimer" to="PlayerHealth" method="_on_inmunity_timer_timeout"]

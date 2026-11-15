@@ -966,9 +966,3 @@ offset_bottom = 262.0
 
 [node name="Rabfran" parent="." unique_id=1665560285 instance=ExtResource("6_aa3ya")]
 position = Vector2(64, 184)
-script = null
-
-[node name="Camera2D" type="Camera2D" parent="Rabfran" unique_id=947109115]
-position = Vector2(31, -12)
-zoom = Vector2(2.355, 2.355)
-position_smoothing_enabled = true
