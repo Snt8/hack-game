@@ -7,8 +7,9 @@ extends CharacterBody2D
 @export var jump_force: float = -300.0
 
 @export_group("Camera Settings")
-@export var camera_zoom: Vector2 = Vector2(0.85, 0.85)
+@export var camera_zoom: Vector2 = Vector2(2, 2)
 @export var enable_smoothing: bool = true
+@export var camera_limits: Rect2 = Rect2(0, -336, 432, 608)
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var camera = $Camera2D
@@ -19,6 +20,10 @@ func _ready():
 	activate_camera()
 	camera.zoom = camera_zoom
 	camera.position_smoothing_enabled = enable_smoothing
+	camera.limit_left = int(camera_limits.position.x)
+	camera.limit_top = int(camera_limits.position.y)
+	camera.limit_right = int(camera_limits.end.x)
+	camera.limit_bottom = int(camera_limits.end.y)
 
 func activate_camera():
 	camera.enabled = true
