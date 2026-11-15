@@ -42,14 +42,12 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vdb1d")
 frame_progress = 0.91475475
 
-[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D" unique_id=1652261408]
-target_position = Vector2(15, 20)
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1250612346]
 position = Vector2(-2, -4)
 shape = SubResource("CircleShape2D_vdb1d")
 
 [node name="EdgeDetector" type="RayCast2D" parent="CharacterBody2D" unique_id=1371243355]
+target_position = Vector2(0, 8)
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=274306244]
 collision_mask = 2

@@ -972,5 +972,5 @@ position = Vector2(64, 184)
 [node name="Enemy" parent="." unique_id=1901844328 instance=ExtResource("9_y37dg")]
 position = Vector2(113, 78)
 
-[node name="Enemy2" parent="." unique_id=222385146 instance=ExtResource("9_y37dg")]
-position = Vector2(229, 145)
+[node name="Enemy2" parent="." unique_id=1824477014 instance=ExtResource("9_y37dg")]
+position = Vector2(265, 131)
