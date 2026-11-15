@@ -1,4 +1,4 @@
-class_name Player
+class_name PlayerMovement
 extends CharacterBody2D
 
 @export_group("Movement Settings")
