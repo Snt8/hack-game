@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://b71m2ftfn2126"]
 
+[ext_resource type="Script" uid="uid://dyu8b7epx5bbc" path="res://scripts/level_controllers/level.gd" id="1_kiua2"]
 [ext_resource type="Texture2D" uid="uid://bac2sa73dcf6" path="res://assets/Enjl-Riverside Park Parallaxing Background/background_1_day.png" id="1_rgk34"]
 [ext_resource type="Texture2D" uid="uid://ekmjstvq1cb8" path="res://assets/Enjl-Riverside Park Parallaxing Background/background_1_dusk.png" id="2_7ancx"]
 [ext_resource type="Texture2D" uid="uid://vpx1svvi0pcc" path="res://assets/Enjl-Riverside Park Parallaxing Background/background_1_night.png" id="2_601o4"]
@@ -10,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://bam1wnjyjcbjl" path="res://scenes/characters/rabfran.tscn" id="6_aa3ya"]
 [ext_resource type="PackedScene" uid="uid://b75x7kbaxrd7i" path="res://scenes/characters/enemy.tscn" id="9_y37dg"]
 [ext_resource type="PackedScene" uid="uid://d3i472txmbruo" path="res://scenes/characters/next-level-coin.tscn" id="10_l1fco"]
+[ext_resource type="PackedScene" uid="uid://b52p3hgvtjtam" path="res://scenes/levels/death-zone.tscn" id="11_vosk6"]
+[ext_resource type="PackedScene" uid="uid://bjm30soi6rchx" path="res://scenes/ui/hud.tscn" id="13_ysixj"]
+[ext_resource type="PackedScene" uid="uid://gmyqudau3e8s" path="res://scenes/characters/power-up.tscn" id="14_ngwb5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kicei"]
 texture = ExtResource("1_rgk34")
@@ -941,6 +945,7 @@ sources/2 = SubResource("TileSetAtlasSource_y37dg")
 sources/3 = SubResource("TileSetAtlasSource_aa3ya")
 
 [node name="mundo_uno" type="Node2D" unique_id=992216790]
+script = ExtResource("1_kiua2")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2096179767]
 
@@ -968,18 +973,33 @@ offset_right = 433.0
 offset_bottom = 262.0
 
 [node name="Rabfran" parent="." unique_id=1665560285 instance=ExtResource("6_aa3ya")]
-position = Vector2(64, 184)
+position = Vector2(83, 192)
 
 [node name="Enemy" parent="." unique_id=1901844328 instance=ExtResource("9_y37dg")]
 position = Vector2(113, 78)
 
-<<<<<<< HEAD
 [node name="Enemy2" parent="." unique_id=222385146 instance=ExtResource("9_y37dg")]
-position = Vector2(229, 145)
+position = Vector2(264, 144)
 
 [node name="NextLevelCoin" parent="." unique_id=331781630 instance=ExtResource("10_l1fco")]
 position = Vector2(11, -323)
-=======
-[node name="Enemy2" parent="." unique_id=1824477014 instance=ExtResource("9_y37dg")]
-position = Vector2(265, 131)
->>>>>>> 4bb7973b6f0a36b4ea14a8cec6363d33d6dc99b3
+
+[node name="Enemy4" parent="." unique_id=1264719520 instance=ExtResource("9_y37dg")]
+position = Vector2(118, -322)
+
+[node name="Enemy6" parent="." unique_id=454923968 instance=ExtResource("9_y37dg")]
+position = Vector2(124, -211)
+
+[node name="Enemy3" parent="." unique_id=1824477014 instance=ExtResource("9_y37dg")]
+position = Vector2(284, 12)
+
+[node name="Enemy5" parent="." unique_id=308077603 instance=ExtResource("9_y37dg")]
+position = Vector2(156, -114)
+
+[node name="DeathZone" parent="." unique_id=494788840 instance=ExtResource("11_vosk6")]
+position = Vector2(1, 219)
+
+[node name="Hud" parent="." unique_id=481306428 instance=ExtResource("13_ysixj")]
+
+[node name="PowerUp" parent="." unique_id=1298359707 instance=ExtResource("14_ngwb5")]
+position = Vector2(30, 63)
