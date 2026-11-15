@@ -2,7 +2,7 @@ class_name EnemyMovement
 extends CharacterBody2D
 
 @export var speed: float = 100.0
-@export var edge_look_ahead: float = 8.0  
+@export var edge_look_ahead: float = 8.0   # cuántos px por delante mira el rayo
 
 @onready var edge_detector: RayCast2D = $EdgeDetector
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D

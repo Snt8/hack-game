@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c5cu5ct5obemo" path="res://assets/enemy-sprite.png" id="1_7jb55"]
 [ext_resource type="Script" uid="uid://dwywilyiireax" path="res://scripts/enemy/movement.gd" id="2_f2e6v"]
+[ext_resource type="Script" uid="uid://ccotjwhrarhhh" path="res://scripts/enemy/attack.gd" id="2_fulqv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fulqv"]
 atlas = ExtResource("1_7jb55")
@@ -32,6 +33,7 @@ radius = 5.0
 radius = 6.0
 
 [node name="Enemy" type="Node2D" unique_id=1901844328]
+script = ExtResource("2_fulqv")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=963098254]
 collision_layer = 4
