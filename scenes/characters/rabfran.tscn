@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bjhyakgp7dciq" path="res://assets/character-sprites.png" id="1_fs2pi"]
 [ext_resource type="Script" uid="uid://n11ir5ehn3b0" path="res://scripts/player/player_movement.gd" id="1_uskv6"]
+[ext_resource type="Script" uid="uid://t4eqfyw07cud" path="res://scripts/player/player_health.gd" id="3_n4y28"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ilp76"]
 atlas = ExtResource("1_fs2pi")
@@ -73,3 +74,6 @@ frame_progress = 0.93068933
 position = Vector2(-4, -5)
 scale = Vector2(0.39999998, 0.6)
 polygon = PackedVector2Array(-10.000001, 10.000001, 10.000001, 10.000001, 10.000001, -10, -10.000001, -10)
+
+[node name="PlayerHealth" type="Node2D" parent="." unique_id=134064540]
+script = ExtResource("3_n4y28")
