@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var jump_force: float = -300.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var health: PlayerHealth = $PlayerHealth
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -33,3 +34,5 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+func become_inmune(time: float) -> void:
+	health.become_inmune(time)
