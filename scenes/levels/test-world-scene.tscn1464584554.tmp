@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://qh88h7gboap4"]
+
+[ext_resource type="Texture2D" uid="uid://1ohbgy5cgqy1" path="res://assets/test-world-sprite.png" id="1_fdbuh"]
+[ext_resource type="Script" uid="uid://dyu8b7epx5bbc" path="res://scripts/level_controllers/level.gd" id="1_y7wbm"]
+[ext_resource type="PackedScene" uid="uid://bam1wnjyjcbjl" path="res://scenes/characters/rabfran.tscn" id="2_4sufl"]
+[ext_resource type="PackedScene" uid="uid://bkkhrx3pyd53v" path="res://scenes/ui/health.tscn" id="3_4v4d1"]
+[ext_resource type="PackedScene" uid="uid://b75x7kbaxrd7i" path="res://scenes/characters/enemy.tscn" id="4_s7lpf"]
+[ext_resource type="PackedScene" uid="uid://gmyqudau3e8s" path="res://scenes/characters/power-up.tscn" id="6_xu77x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkuwh"]
+size = Vector2(1151.5, 23)
+
+[node name="TestWorldScene" type="Node2D" unique_id=1894313864]
+script = ExtResource("1_y7wbm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=858697704]
+position = Vector2(-5, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1993743237]
+texture_filter = 1
+position = Vector2(591, 322)
+scale = Vector2(36.140625, 20.187498)
+texture = ExtResource("1_fdbuh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1210413075]
+position = Vector2(587.25, 492.5)
+shape = SubResource("RectangleShape2D_xkuwh")
+debug_color = Color(0.8565167, 0.36676794, 3.85046e-07, 0.41960785)
+
+[node name="Rabfran" parent="." unique_id=1665560285 instance=ExtResource("2_4sufl")]
+position = Vector2(75.000015, 477)
+scale = Vector2(7, 7)
+
+[node name="Health" parent="." unique_id=1727882470 instance=ExtResource("3_4v4d1")]
+position = Vector2(52, 63)
+scale = Vector2(5, 5)
+
+[node name="Enemy" parent="." unique_id=1901844328 instance=ExtResource("4_s7lpf")]
+position = Vector2(426, 474.99997)
+scale = Vector2(7, 7)
+
+[node name="Enemy2" parent="." unique_id=20523442 instance=ExtResource("4_s7lpf")]
+position = Vector2(1044.0001, 472.99997)
+scale = Vector2(7, 7)
+
+[node name="PowerUp" parent="." unique_id=1298359707 instance=ExtResource("6_xu77x")]
+position = Vector2(176, 473)
+scale = Vector2(5.5, 5.5)
