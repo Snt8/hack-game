@@ -100,10 +100,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Pachuca" type="Node2D" unique_id=1910747034]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdb1d"]
+size = Vector2(305, 387)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=692781323]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1160570462]
 sprite_frames = SubResource("SpriteFrames_w0xt8")
-animation = &"Mover_Hacia_adelante"
+animation = &"Mover_Hacia_Atras"
+frame = 4
+frame_progress = 0.933951
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1395283416]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1913564082]
+position = Vector2(0.5, -21.5)
+shape = SubResource("RectangleShape2D_vdb1d")
