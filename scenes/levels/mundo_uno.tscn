@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bw88spxcysdpy" path="res://assets/world_tileset.png" id="5_mpbea"]
 [ext_resource type="PackedScene" uid="uid://bam1wnjyjcbjl" path="res://scenes/characters/rabfran.tscn" id="6_aa3ya"]
 [ext_resource type="PackedScene" uid="uid://b75x7kbaxrd7i" path="res://scenes/characters/enemy.tscn" id="9_y37dg"]
+[ext_resource type="PackedScene" uid="uid://d3i472txmbruo" path="res://scenes/characters/next-level-coin.tscn" id="10_l1fco"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kicei"]
 texture = ExtResource("1_rgk34")
@@ -974,3 +975,6 @@ position = Vector2(113, 78)
 
 [node name="Enemy2" parent="." unique_id=222385146 instance=ExtResource("9_y37dg")]
 position = Vector2(229, 145)
+
+[node name="NextLevelCoin" parent="." unique_id=331781630 instance=ExtResource("10_l1fco")]
+position = Vector2(11, -323)
