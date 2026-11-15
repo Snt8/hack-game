@@ -59,19 +59,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Rabfran" type="Node2D" unique_id=1665560285]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1629483050]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1629483050]
 collision_layer = 2
 script = ExtResource("1_uskv6")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=546575668]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=546575668]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xkuwh")
 animation = &"bounce-right"
 frame_progress = 0.93068933
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=1974749537]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1974749537]
 position = Vector2(-4, -5)
 scale = Vector2(0.39999998, 0.6)
 polygon = PackedVector2Array(-10.000001, 10.000001, 10.000001, 10.000001, 10.000001, -10, -10.000001, -10)
@@ -90,3 +88,7 @@ drag_bottom_margin = 0.0
 [node name="PlayerHealth" type="Node2D" parent="." unique_id=134064540]
 position = Vector2(1, 1)
 script = ExtResource("3_n4y28")
+
+[node name="InmunityTimer" type="Timer" parent="PlayerHealth" unique_id=1071609763]
+
+[connection signal="timeout" from="PlayerHealth/InmunityTimer" to="PlayerHealth" method="_on_inmunity_timer_timeout"]

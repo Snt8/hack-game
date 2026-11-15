@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bam1wnjyjcbjl" path="res://scenes/characters/rabfran.tscn" id="2_4sufl"]
 [ext_resource type="PackedScene" uid="uid://bkkhrx3pyd53v" path="res://scenes/ui/health.tscn" id="3_4v4d1"]
 [ext_resource type="PackedScene" uid="uid://b75x7kbaxrd7i" path="res://scenes/characters/enemy.tscn" id="4_s7lpf"]
+[ext_resource type="PackedScene" uid="uid://gmyqudau3e8s" path="res://scenes/characters/power-up.tscn" id="6_xu77x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkuwh"]
 size = Vector2(1151.5, 23)
@@ -35,5 +36,13 @@ position = Vector2(52, 63)
 scale = Vector2(5, 5)
 
 [node name="Enemy" parent="." unique_id=1901844328 instance=ExtResource("4_s7lpf")]
-position = Vector2(855.99994, 485.99997)
+position = Vector2(426, 474.99997)
 scale = Vector2(7, 7)
+
+[node name="Enemy2" parent="." unique_id=20523442 instance=ExtResource("4_s7lpf")]
+position = Vector2(1044.0001, 472.99997)
+scale = Vector2(7, 7)
+
+[node name="PowerUp" parent="." unique_id=1298359707 instance=ExtResource("6_xu77x")]
+position = Vector2(176, 473)
+scale = Vector2(5.5, 5.5)

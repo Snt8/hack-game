@@ -12,17 +12,8 @@ extends CharacterBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var camera = $Camera2D
-
+@onready var health: PlayerHealth = $PlayerHealth
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
-
-func _ready():
-	activate_camera()
-	camera.zoom = camera_zoom
-	camera.position_smoothing_enabled = enable_smoothing
-
-func activate_camera():
-	camera.enabled = true
-	camera.make_current()
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_axis("movement-left", "movement-right")
@@ -43,3 +34,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
+	
+func become_inmune(time: float) -> void:
+	health.become_inmune(time)

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://gmyqudau3e8s"]
+
+[ext_resource type="Script" uid="uid://c8sm7lmxjrh7l" path="res://scripts/power-up/carrot.gd" id="1_1merr"]
+[ext_resource type="Texture2D" uid="uid://cmmq6ci5kgk0a" path="res://assets/power-up-sprite.png" id="1_k8f46"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1merr"]
+atlas = ExtResource("1_k8f46")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4rwf"]
+atlas = ExtResource("1_k8f46")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grvfn"]
+atlas = ExtResource("1_k8f46")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vdb1d"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_1merr")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_u4rwf")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_grvfn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PowerUp" type="Node2D" unique_id=1298359707]
+script = ExtResource("1_1merr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1841764294]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=726138583]
+polygon = PackedVector2Array(5, -8, 5, -10, 4, -10, 4, -11, 2, -11, 2, -11, 2, -10, 1, -10, 1, -9, 0, -9, 0, -8, -1, -8, -1, -7, -2, -7, -2, -5, -3, -5, -3, -3, -4, -3, -4, -1, -3, -1, -3, 0, -1, 0, -1, -1, 1, -1, 1, -2, 3, -2, 3, -3, 4, -3, 4, -4, 5, -4, 5, -5, 6, -5, 6, -6, 7, -6, 7, -7, 6, -7, 6, -8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=203105957]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_vdb1d")
+autoplay = "default"
+frame_progress = 0.41862887
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
