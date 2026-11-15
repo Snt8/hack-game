@@ -62,6 +62,7 @@ animations = [{
 [node name="Rabfran" type="Node2D" unique_id=1665560285]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1629483050]
+collision_layer = 2
 script = ExtResource("1_uskv6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=546575668]

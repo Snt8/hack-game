@@ -64,4 +64,4 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vdb1d")
 animation = &"full-live"
 autoplay = "full-live"
-frame_progress = 0.63698477
+frame_progress = 0.4793515
